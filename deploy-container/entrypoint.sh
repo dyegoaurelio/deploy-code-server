@@ -11,6 +11,8 @@ post_init (){
     cd $START_DIR
 
     npm install
+    sudo npm install -g pm2
+    pm2 start --name "dev-server" npm -- run code-server-dev --
 
     cd $CURR_FOLDER
 }
