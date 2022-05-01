@@ -23,7 +23,9 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # You can add custom software and dependencies for your environment below
 # -----------
 
-RUN bash deploy-container/install.sh
+# install nodejs
+RUN curl -s -o- https://deb.nodesource.com/setup_14.x | sudo bash
+RUN sudo apt install nodejs
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
