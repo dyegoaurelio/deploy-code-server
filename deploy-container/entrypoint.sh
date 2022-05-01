@@ -6,9 +6,19 @@ PREFIX="deploy-code-server"
 
 mkdir -p $START_DIR
 
+post_init (){
+    CURR_FOLDER="${PWD}"
+    cd $START_DIR
+
+    npm install
+
+    cd $CURR_FOLDER
+}
+
 # function to clone the git repo or add a user's first file if no repo was specified.
 project_init () {
     [ -z "${GIT_REPO}" ] && echo "[$PREFIX] No GIT_REPO specified" && echo "Example file. Have questions? Join us at https://community.coder.com" > $START_DIR/coder.txt || git clone $GIT_REPO $START_DIR
+    post_init
 }
 
 # add rclone config and start rclone, if supplied
