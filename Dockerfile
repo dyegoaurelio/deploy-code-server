@@ -1,10 +1,11 @@
 # Start from the code-server Debian base image
-FROM codercom/code-server:4.0.2
+FROM codercom/code-server:latest
 
 USER coder
 
 # Apply VS Code settings
 COPY deploy-container/settings.json .local/share/code-server/User/settings.json
+COPY deploy-container/keybindings.json .local/share/code-server/User/keybindings.json
 
 # Use bash shell
 ENV SHELL=/bin/bash
@@ -21,6 +22,8 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # You can add custom software and dependencies for your environment below
 # -----------
+
+RUN bash deploy-container/install.sh
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code

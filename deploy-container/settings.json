@@ -1,7 +1,55 @@
 {
-  "workbench.colorTheme": "Default Dark+",
-  "git.postCommitCommand": "sync",
-  "git.enableSmartCommit": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "tabnine.experimentalAutoImports": true,
   "git.confirmSync": false,
-  "git.autofetch": true
+  "workbench.startupEditor": "newUntitledFile",
+  "window.menuBarVisibility": "toggle",
+  "workbench.sideBar.location": "left",
+  "workbench.activityBar.visible": true,
+  "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "terminal.integrated.inheritEnv": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "update.mode": "manual",
+  "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.editorAssociations": {
+      "*.ico": "cweijan.officeViewer",
+      "*.png": "cweijan.officeViewer",
+      "*.gif": "cweijan.officeViewer",
+      "*.ipynb": "jupyter-notebook"
+  },
+  "python.pythonPath": "/usr/bin/python3",
+  "window.title": "${dirty}${rootName}",
+  "texlab.server.autoDownload": true,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[handlebars]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "jupyter.askForKernelRestart": false,
+  "jupyter.sendSelectionToInteractiveWindow": true,
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "notebook.cellToolbarLocation": {
+      "default": "right",
+      "jupyter-notebook": "left"
+  },
+  "jupyter.interactiveWindowMode": "perFile",
+  "workbench.colorTheme": "Dracula",
+  "window.zoomLevel": 1
 }
